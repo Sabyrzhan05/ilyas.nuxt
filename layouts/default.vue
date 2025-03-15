@@ -1,7 +1,7 @@
 <template>
   <header class="flex flex-row w-full relative bg-[#101820] border-b-2 border-[#D7A22A] max-sm:justify-between max-sm:z-10 max-sm:relative">
   <div class="basis-1/4 flex items-center justify-start px-8 min-w-40 max-sm:basis-auto">
-    <img src="assets/images/Logo.png" class="w-16 h-16 bg-transparent" alt="Team Logo">
+    <img src="public/images/Logo.png" class="w-16 h-16 bg-transparent" alt="Team Logo">
   </div>
   <div class="basis-1/4 max-sm:hidden"></div>
 
@@ -42,9 +42,9 @@
     <slot />
   </main>
   <footer class="flex flex-row w-full bg-[#101820] border-t-2 border-[#D7A22A] items-center justify-center px-4 py-2 gap-4">
-    <a href="https://www.youtube.com"><img src="assets/images/youtube.png" class="w-16 h-16"></a>
-    <a href="https://github.com"><img src="assets/images/hub.png" class="w-16 h-16"></a>
-    <a href="https://www.facebook.com"><img src="assets/images/fc.png" class="w-16 h-16 bg-transparent"></a>
+    <a href="https://www.youtube.com"><img src="public/images/youtube.png" class="w-16 h-16"></a>
+    <a href="https://github.com"><img src="public/images/hub.png" class="w-16 h-16"></a>
+    <a href="https://www.facebook.com"><img src="public/images/fc.png" class="w-16 h-16 bg-transparent"></a>
 </footer>
 </template>
 
