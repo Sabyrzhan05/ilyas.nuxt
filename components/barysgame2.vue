@@ -1,3 +1,3 @@
 <template>
-    <video controls><source src = "/video/barysgame2.mp4"></video>  
-  </template>
+  <video controls><source src = "/video/barys.mp4"></video>  
+</template>
