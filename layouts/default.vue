@@ -20,7 +20,8 @@
     </div>
 
     <NuxtLink to="/login" class="my-auto p-2 text-white hover:bg-[#D7A22A] hover:text-black max-sm:w-full max-sm:text-center">Login</NuxtLink>
-    <NuxtLink to="/logout" class="my-auto p-2 text-white hover:bg-[#D7A22A] hover:text-black max-sm:w-full max-sm:text-center">Logout</NuxtLink>
+    <div class="links" @click="signOut()">Logout</div>
+      <img :src="data?.user?.image" v-show="log_check" class="w-14 h-14 border-2 border-black rounded-full" />
   </nav>
 
     <div v-if="!burger" @click="switch_burger" class="max-sm:flex max-sm:flex-col max-sm:mr-8 max-sm:justify-between max-sm:items-center max-sm:w-8 max-sm:h-6 max-sm:mt-5">
@@ -47,6 +48,12 @@
     <a href="https://www.facebook.com"><img src="public/images/fc.png" class="w-16 h-16 bg-transparent"></a>
 </footer>
 </template>
+
+<style scoped>
+.links {
+  @apply my-auto p-2 text-white hover:bg-[#D7A22A] hover:text-black max-sm:w-full max-sm:border-b-2 max-sm:border-[#D7A22A] max-sm:text-center
+}
+</style>
 
 
 <script setup lang="ts">
@@ -78,6 +85,12 @@ const burger = ref<boolean>(false)
 const submenu = ref<boolean>(false)
 const switch_burger = ()=> {burger.value = !burger.value}
 const switch_submenu = ()=> {submenu.value = !submenu.value}
+
+const { signOut, status} = useAuth()
+
+const log_check = computed(() => status.value === 'authenticated')
+
+const {data} = await useFetch('/api/me')
 
 </script>
 
